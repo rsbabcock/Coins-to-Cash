@@ -34,9 +34,9 @@ let dollarAmount = () => {
     const dimeVal = piggyBank.dimes * .10;
     // 4 quarters go into 1 dollar, so 50 quarters would be $12.50
     const quarterVal = piggyBank.quarters * .25;
-
+    // sum of coins value
     let sum = pennyVal + nickelVal + dimeVal + quarterVal;
-
+    // If statement that gives $ prefix or "cents" suffix
     if(sum > .99) {
         return '$' + sum;
     } else sum + ' cents'
@@ -44,3 +44,6 @@ let dollarAmount = () => {
 }
 
 console.log(dollarAmount());
+
+// Now do the reverse. Convert the dollar amount into the coins that make up that dollar amount. 
+// The final result is an object with the correct number of quarters, dimes, nickels, and pennies.
