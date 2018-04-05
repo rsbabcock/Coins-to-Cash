@@ -47,3 +47,11 @@ console.log(dollarAmount());
 
 // Now do the reverse. Convert the dollar amount into the coins that make up that dollar amount. 
 // The final result is an object with the correct number of quarters, dimes, nickels, and pennies.
+
+// const dollarAmount = 0.10
+// const piggyBank = {}
+
+// // Your magic code here
+
+// console.log(piggyBank)
+
