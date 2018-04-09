@@ -16,7 +16,7 @@
 
 // For example, if my piggy bank only held those pennies from above, when I type the variable name of dolllarAmount into the console, the output would be.
 
-// > dollarAmount
+// // > dollarAmount
 // $3.42
 
 const piggyBank = {
@@ -48,8 +48,34 @@ console.log(dollarAmount());
 // Now do the reverse. Convert the dollar amount into the coins that make up that dollar amount. 
 // The final result is an object with the correct number of quarters, dimes, nickels, and pennies.
 
-// const dollarAmount = 0.10
-// const piggyBank = {}
+// const dollarAmount = ""
+const reversePiggyBank = {quarters: 0, dimes: 0, nickels: 0, pennies: 0}
+
+const reverseDollarAmount = (dollarAmountVariable) => {
+   let dollar = dollarAmountVariable * 100
+    for (let i = 0; i < dollar; i ++)
+    if(dollar >= 25 ){
+        dollar -= 25
+        reversePiggyBank.quarters += 1
+    } 
+    if (dollar >= 10){
+        dollar -= 10
+        reversePiggyBank.dimes += 1
+    }
+    if(dollar >= 5) {
+        dollar -= 5
+        reversePiggyBank.nickels += 1
+    } 
+    if(dollar >= 1) {
+        dollar -= 1
+        reversePiggyBank.pennies += 1
+    }
+}
+
+// 
+console.log(reverseDollarAmount(.10))
+
+console.log(reversePiggyBank)
 
 // // Your magic code here
 
